@@ -1,2 +1,4 @@
-# devqin.github.io
 blog
+====
+
+写一些东西吧。

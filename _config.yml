@@ -1,0 +1,12 @@
+# Site settings
+title: devqin
+email: devqin$gmail.com
+description: > #
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://qintengfei.github.io" # the base hostname & protocol for your site
+twitter_username: qintengfei
+github_username:  qintengfei
+
+# Build settings
+markdown: kramdown
+permalink: /:year/:title:output_ext
