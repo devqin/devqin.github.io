@@ -24,8 +24,8 @@ paginate: 8
 github_username:  devqin
 lang: zh-cn
 # google_analytics: UA-NNNNNNNN-N
-# disqus:
-#     shortname: my_disqus_shortname
+disqus:
+    shortname: devqin
 # Build settings
 markdown: kramdown
 theme: minima
