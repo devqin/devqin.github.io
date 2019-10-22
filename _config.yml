@@ -14,26 +14,29 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: 步履不停
-email: devqin@gmail.com
+email: devqin#gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   缓慢而确定
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://devqin.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 show_excerpts: true
-paginate: 8
+paginate: 10
 github_username:  devqin
 lang: zh-cn
-# google_analytics: UA-NNNNNNNN-N
+google_analytics: UA-150124574-1
 disqus:
     shortname: devqin
 # Build settings
 markdown: kramdown
 theme: minima
+minima:
+  social_links:
+    github: devqin
 plugins:
   - jekyll-feed
   - jekyll-paginate
+  - jekyll-seo-tag
 permalink: /:year/:title:output_ext
-
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

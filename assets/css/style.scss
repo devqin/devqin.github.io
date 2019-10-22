@@ -3,3 +3,11 @@
 ---
 
 @import "minima";
+.social-media-list{
+    float: left;
+}
+.social-media-list li a {
+    display: block;
+    padding: 0;
+    border: 0;
+}
