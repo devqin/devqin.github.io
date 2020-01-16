@@ -19,10 +19,6 @@ layout: default
     {{ content }}
   </div>
   <p class="divider">The End</p>
-  {%- if site.disqus.shortname -%}
-  {%- include disqus_comments.html -%}
-  {%- endif -%}
-
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
   <div class="tags">
     <p>文章标签</p>
@@ -42,4 +38,10 @@ layout: default
     </ul>
   </div>
   {% endif %}
+
+  {%- if site.disqus.shortname -%}
+  {%- include disqus_comments.html -%}
+  {%- endif -%}
+
+
 </article>
