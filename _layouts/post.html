@@ -11,17 +11,35 @@ layout: default
         {{ page.date | date: date_format }}
       </time>
       {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author | escape }}</span></span>
+      • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card"
+          itemprop="name">{{ page.author | escape }}</span></span>
       {%- endif -%}</p>
   </header>
-
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
   </div>
-
+  <p class="divider">The End</p>
   {%- if site.disqus.shortname -%}
-    {%- include disqus_comments.html -%}
+  {%- include disqus_comments.html -%}
   {%- endif -%}
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+  <div class="tags">
+    <p>文章标签</p>
+    <ul class="tag-list">
+      {% for tag in page.tags %}
+      <li><a href="/tag/{{ tag }}">{{ tag }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% if site.related_posts.size >= 1 %}
+  <div class="related-posts">
+    <p>相关文章</p>
+    <ul class="related-list">
+      {% for related_post in site.related_posts limit: 5 %}
+      <li><a href="{{ related_post.url }}">{{ related_post.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
 </article>
