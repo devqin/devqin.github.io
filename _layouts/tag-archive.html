@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<h3> {{ page.type }} 为 '{{ page.title }}' 文章合集<span> 共 {{ page.posts.size}} 篇</span></h3>
+<ul class="post-list">
+  {%- for post in page.posts -%}
+  <li>
+    {%- assign date_format = site.minima.date_format | default: "%Y年%m月%d日" -%}
+    <span class="post-meta">{{ post.date | date: date_format }}</span>
+    <h3>
+      <a class="post-link" href="{{ post.url | relative_url }}">
+        {{ post.title | escape }}
+      </a>
+    </h3>
+    {%- if site.show_excerpts -%}
+    {{ post.excerpt }}
+    {%- endif -%}
+  </li>
+  {%- endfor -%}
+
+</ul>

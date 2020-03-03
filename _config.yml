@@ -19,7 +19,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   缓慢而确定
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://devqin.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-show_excerpts: true
+show_excerpts: false
 paginate: 10
 github_username:  devqin
 lang: zh-cn
@@ -32,10 +32,21 @@ theme: minima
 minima:
   social_links:
     github: devqin
+jekyll-archives:
+  enabled: ['tags','month']
+  layouts:
+    month: month-archive
+    tag: tag-archive
+  permalinks:
+    month: '/:year/:month/'
+    tag: '/tag/:name/'
 plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-seo-tag
+  - jekyll-archives
+  - jekyll/tagging
+  - jekyll-tagging-related_posts
 permalink: /:year/:title:output_ext
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
