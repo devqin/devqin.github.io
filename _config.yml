@@ -16,16 +16,16 @@
 title: 步履不停
 email: devqin#gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  缓慢而确定
+
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://devqin.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 show_excerpts: true
 paginate: 10
-github_username:  devqin
+github_username: devqin
 lang: zh-cn
 google_analytics: UA-150124574-1
 disqus:
-    shortname: devqin
+  shortname: devqin
 # Build settings
 markdown: kramdown
 theme: minima
@@ -33,13 +33,13 @@ minima:
   social_links:
     github: devqin
 jekyll-archives:
-  enabled: ['tags','month']
+  enabled: ["tags", "month"]
   layouts:
     month: month-archive
     tag: tag-archive
   permalinks:
-    month: '/:year/:month/'
-    tag: '/tag/:name/'
+    month: "/:year/:month/"
+    tag: "/tag/:name/"
 plugins:
   - jekyll-feed
   - jekyll-paginate
@@ -51,11 +51,11 @@ permalink: /:year/:title:output_ext
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
