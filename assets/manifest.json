@@ -1,0 +1,17 @@
+{
+  "name": "步履不停",
+  "short_name": "步履不停",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fff",
+  "theme_color": "#fff",
+  "icons": [
+    {
+      "src": "assets/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    }
+  ],
+  "splash_pages": null
+}
