@@ -1,7 +1,7 @@
-const cacheName = 'cache-v1';
+const CACHE_NAME = 'cache-v1';
 self.addEventListener('install', (event) => {
     self.skipWaiting()
-    event.waitUntil(caches.open(cacheName).then(cache => {
+    event.waitUntil(caches.open(CACHE_NAME).then(cache => {
         cache.addAll([
             '/',
             '/assets/touch-icon-iphone.png',
@@ -27,17 +27,24 @@ self.addEventListener('activate', (event) => {
   );
 });
 self.addEventListener('fetch', (event) => {
-  event.respondWith(caches.match(event.request).then(function(response) {
-    if (response !== undefined) {
-      return response;
-    } else {
-      return fetch(event.request).then(function (response) {
-        let responseClone = response.clone();
-        caches.open(cacheName).then(function (cache) {
-          cache.put(event.request, responseClone);
+  event.respondWith(
+    caches.match(event.request).then(function(response) {
+      if (response) {
+        return response;
+      }
+      var fetchRequest = event.request.clone();
+        return fetch(fetchRequest).then(
+        function(response) {
+          if(!response || response.status !== 200 || response.type !== 'basic') {
+          return response;
+        }
+        var responseToCache = response.clone();
+        caches.open(CACHE_NAME).then(function(cache) {
+          cache.put(event.request, responseToCache);
         });
         return response;
-      })
-    }
-  }));
+        }
+      );
+    })
+  );
 });
