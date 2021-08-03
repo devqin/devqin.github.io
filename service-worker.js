@@ -3,7 +3,6 @@ self.addEventListener('install', (event) => {
     self.skipWaiting()
     event.waitUntil(caches.open(CACHE_NAME).then(cache => {
         cache.addAll([
-            '/',
             '/assets/touch-icon-iphone.png',
             '/assets/minima-social-icons.svg',
             '/assets/css/style.css',
