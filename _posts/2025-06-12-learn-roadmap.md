@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "前端学习AI路线图"
+categories: ['AI']
+tags: ['AI']
+author: 'devqin'
+---
 
 ### ## 精细化行动计划：从前端工程师到AI应用开发者
 
